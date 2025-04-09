@@ -13,7 +13,7 @@ CREATE TABLE Employee (
 );
 
 -- Drop table if needed (though unnecessary after creation)
-DROP TABLE Employee;
+-- DROP TABLE Employee;
 
 -- Selecting from Employee (only works after inserting data)
 SELECT * FROM Employee;
@@ -32,3 +32,7 @@ WHERE FName = 'Saeed' AND SSN = 111;
 UPDATE Employee
 SET BirthDate = '2010/12/12'
 WHERE SSN = 113;
+
+SELECT SSN, Salary, Salary *0.5 AS HalfSalary
+From Employee
+Where HalfSalary >0.5;
